@@ -29,3 +29,14 @@ The script regenerates the synthetic files, audits them, summarizes the outputs,
 ## Why this matters
 
 The smoke tests let GitHub Actions verify the toolchain without downloading real robotic or maritime datasets. Real dataset audits can be run locally, on institutional storage, or on a self-hosted runner, while CI remains small and deterministic.
+
+
+## GitHub Actions permission note
+
+The workflow invokes the smoke script with `bash ./scripts/run_smoke_audits.sh` rather than relying on the executable bit. This avoids `Permission denied` failures when a script is copied onto Windows or committed without `chmod +x`. It is still safe to run locally as either:
+
+```bash
+bash ./scripts/run_smoke_audits.sh
+# or, if executable permissions are preserved:
+./scripts/run_smoke_audits.sh
+```

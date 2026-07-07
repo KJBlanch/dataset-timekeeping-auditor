@@ -4,7 +4,7 @@
   "dataset_id": "smoke_mcap",
   "documentation": {},
   "errors": [],
-  "generated_at_utc": "2026-07-07T07:30:10.239252+00:00",
+  "generated_at_utc": "2026-07-07T07:48:23.664890+00:00",
   "source": "smoke/mcap/synthetic_mass_log.mcap",
   "summary": {
     "topic_count": 1,
