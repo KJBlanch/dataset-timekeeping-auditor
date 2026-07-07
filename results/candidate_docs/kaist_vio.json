@@ -1,0 +1,83 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "kaist_vio",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and s",
+          "t/kaistviodataset ## Expected sensors - stereo_camera - imu ## Timing questions to investigate - vehicle_camera_imu_sync - bag_record_time_vs_header_stamp ## Source-documentation TODO Add one or more of the following files in this folder:",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields,"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 2,
+        "hits": [
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "racted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "nsors - stereo_camera - imu ## Timing questions to investigate - vehicle_camera_imu_sync - bag_record_time_vs_header_stamp ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` copied from the da",
+          "ed timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size."
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 0,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 1,
+      "total": 2
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T08:27:03.051715+00:00",
+  "source": "candidate_docs/kaist_vio",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 0,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 1,
+    "total": 2
+  },
+  "topics": [],
+  "warnings": []
+}

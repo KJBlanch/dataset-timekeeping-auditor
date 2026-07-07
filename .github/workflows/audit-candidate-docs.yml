@@ -2,11 +2,24 @@ name: Audit candidate documentation
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Documentation source mode"
+        required: true
+        default: "auto-seed"
+        type: choice
+        options:
+          - auto-seed
+          - fetch
+          - fetch-and-seed-missing
+          - strict-existing-only
   push:
     paths:
       - "candidate_datasets.yaml"
       - "candidate_docs/**"
       - "scripts/audit_candidate_docs.sh"
+      - "scripts/fetch_candidate_docs.py"
+      - "scripts/seed_candidate_docs_from_registry.py"
       - "src/dataset_time_auditor/**"
       - ".github/workflows/audit-candidate-docs.yml"
 
@@ -31,14 +44,34 @@ jobs:
           python -m pip install -e .
 
       - name: Run candidate documentation audits
+        shell: bash
         run: |
-          bash ./scripts/audit_candidate_docs.sh
+          MODE="${{ github.event.inputs.mode || 'auto-seed' }}"
+          case "$MODE" in
+            auto-seed)
+              bash ./scripts/audit_candidate_docs.sh
+              ;;
+            fetch)
+              bash ./scripts/audit_candidate_docs.sh --fetch --no-auto-seed
+              ;;
+            fetch-and-seed-missing)
+              bash ./scripts/audit_candidate_docs.sh --fetch --seed-missing
+              ;;
+            strict-existing-only)
+              bash ./scripts/audit_candidate_docs.sh --no-auto-seed --fail-if-empty
+              ;;
+            *)
+              echo "Unknown mode: $MODE" >&2
+              exit 2
+              ;;
+          esac
 
       - name: Upload candidate documentation results
         uses: actions/upload-artifact@v4
         with:
           name: candidate-docs-audit-results
           path: |
+            candidate_docs/
             results/candidate_docs/
             tables/candidate_docs_summary.csv
             tables/candidate_docs_summary.md

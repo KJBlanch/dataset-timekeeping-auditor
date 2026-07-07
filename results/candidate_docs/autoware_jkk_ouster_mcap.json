@@ -1,0 +1,94 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "autoware_jkk_ouster_mcap",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 2,
+        "hits": [
+          "mcap",
+          "ros2"
+        ],
+        "snippets": [
+          "toware_jkk_ouster_mcap` - Tier: `1` - Domain: `autonomous_vehicle_lidar` - MASS relevance: `medium` - Expected format: `ros2_mcap_or_ros2_bag_plus_pcap` - Target audit level: `L1` - Download policy: `one_mcap_or_pcap_sample` - Status: `candidat",
+          "ster_mcap` - Tier: `1` - Domain: `autonomous_vehicle_lidar` - MASS relevance: `medium` - Expected format: `ros2_mcap_or_ros2_bag_plus_pcap` - Target audit level: `L1` - Download policy: `one_mcap_or_pcap_sample` - Status: `candidate` ## Candid",
+          "--- FILE: candidate_docs/autoware_jkk_ouster_mcap/registry_note.md --- # Autoware / JKK Ouster MCAP Sample > REGISTRY NOTE ONLY \u2014 NOT SOURCE DOCUMENTATION. > > This fil",
+          "--- FILE: candidate_docs/autoware_jkk_ouster_mcap/registry_note.md --- # Autoware / JKK Ouster MCAP Sample > REGISTRY NOTE ONLY \u2014 NOT SOURCE DOCUMENTATION. > > This file was generated from `candidate_datasets.yaml` so"
+        ]
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and s",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields,"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 4,
+        "hits": [
+          "log_time",
+          "publish_time",
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "racted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "/datasets/ ## Expected sensors - lidar ## Timing questions to investigate - mcap_log_time_vs_publish_time_vs_header_stamp - pcap_packet_time_vs_decoded_lidar_time ## Source-documentation TODO Add one or more of the following files in this",
+          "ed timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "thub.io/autoware-documentation/main/datasets/ ## Expected sensors - lidar ## Timing questions to investigate - mcap_log_time_vs_publish_time_vs_header_stamp - pcap_packet_time_vs_decoded_lidar_time ## Source-documentation TODO Add one or more",
+          "ware-documentation/main/datasets/ ## Expected sensors - lidar ## Timing questions to investigate - mcap_log_time_vs_publish_time_vs_header_stamp - pcap_packet_time_vs_decoded_lidar_time ## Source-documentation TODO Add one or more of the followin"
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 1,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 2,
+      "total": 4
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T08:27:05.256690+00:00",
+  "source": "candidate_docs/autoware_jkk_ouster_mcap",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 1,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 2,
+    "total": 4
+  },
+  "topics": [],
+  "warnings": []
+}

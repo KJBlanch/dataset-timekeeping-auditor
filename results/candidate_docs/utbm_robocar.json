@@ -1,0 +1,90 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "utbm_robocar",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 1,
+        "hits": [
+          "drift"
+        ],
+        "snippets": [
+          "## Expected sensors - lidar - radar - cameras - gnss - imu ## Timing questions to investigate - long_duration_clock_drift_documentation - multi_sensor_sync_and_rosbag_time ## Source-documentation TODO Add one or more of the following files"
+        ]
+      },
+      "middleware": {
+        "hit_count": 1,
+        "hits": [
+          "rosbag"
+        ],
+        "snippets": [
+          "ras - gnss - imu ## Timing questions to investigate - long_duration_clock_drift_documentation - multi_sensor_sync_and_rosbag_time ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` copied from t"
+        ]
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and s",
+          "ar - cameras - gnss - imu ## Timing questions to investigate - long_duration_clock_drift_documentation - multi_sensor_sync_and_rosbag_time ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` co",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields,"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 2,
+        "hits": [
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "racted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "ed timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size."
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 1,
+      "max_total": 12,
+      "middleware_semantics_documented": 1,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 1,
+      "total": 4
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T08:27:17.355653+00:00",
+  "source": "candidate_docs/utbm_robocar",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 1,
+    "max_total": 12,
+    "middleware_semantics_documented": 1,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 1,
+    "total": 4
+  },
+  "topics": [],
+  "warnings": []
+}

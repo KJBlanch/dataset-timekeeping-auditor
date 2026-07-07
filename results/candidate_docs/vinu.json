@@ -1,0 +1,85 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "vinu",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "/gnsb8mwc73/1 ## Expected sensors - camera - lidar - imu - gnss ## Timing questions to investigate - post_processed_synchronized_bag_semantics - original_vs_converted_timestamp_preservation ## Source-documentation TODO Add one or more of the f",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and s",
+          "/gnsb8mwc73/1 ## Expected sensors - camera - lidar - imu - gnss ## Timing questions to investigate - post_processed_synchronized_bag_semantics - original_vs_converted_timestamp_preservation ## Source-documentation TODO Add one or more of",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields,"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 2,
+        "hits": [
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "r - imu - gnss ## Timing questions to investigate - post_processed_synchronized_bag_semantics - original_vs_converted_timestamp_preservation ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` copie",
+          "racted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "imu - gnss ## Timing questions to investigate - post_processed_synchronized_bag_semantics - original_vs_converted_timestamp_preservation ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` copie",
+          "ed timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size."
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 0,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 1,
+      "total": 2
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T08:27:18.442159+00:00",
+  "source": "candidate_docs/vinu",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 0,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 1,
+    "total": 2
+  },
+  "topics": [],
+  "warnings": []
+}

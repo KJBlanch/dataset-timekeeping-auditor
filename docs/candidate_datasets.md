@@ -8,6 +8,33 @@ This file defines the first practical polling set for the MASS-oriented dataset 
 
 The canonical machine-readable list is `candidate_datasets.yaml`.
 
+
+## Bootstrapping documentation folders
+
+If `candidate_docs/` is empty, the audit script now creates registry-note placeholders automatically. These files are useful for CI sanity checks, but they are explicitly marked as **not source documentation** and should not be cited as evidence in the paper.
+
+```bash
+bash ./scripts/audit_candidate_docs.sh
+```
+
+To try a lightweight web fetch of candidate pages without downloading raw datasets:
+
+```bash
+bash ./scripts/audit_candidate_docs.sh --fetch
+```
+
+To fetch what can be fetched and create registry-note placeholders for the rest:
+
+```bash
+bash ./scripts/audit_candidate_docs.sh --fetch --seed-missing
+```
+
+For a strict paper-evidence run, add real README/page/paper notes under `candidate_docs/<dataset_id>/` and run:
+
+```bash
+bash ./scripts/audit_candidate_docs.sh --no-auto-seed --fail-if-empty
+```
+
 ## First L0 pass
 
 Run documentation audits for every Tier 1 and Tier 2 candidate before downloading raw data. Store copied README/paper text or manually extracted timing notes under:

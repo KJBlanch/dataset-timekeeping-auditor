@@ -1,0 +1,89 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "usvtrack",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 1,
+        "hits": [
+          "latency"
+        ],
+        "snippets": [
+          "ng questions to investigate - radar_camera_gps_imu_synchronization - target_track_timestamp_semantics - maritime_radar_latency_documentation ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` copi"
+        ]
+      },
+      "middleware": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "18737 ## Expected sensors - 4d_radar - camera - gps - imu ## Timing questions to investigate - radar_camera_gps_imu_synchronization - target_track_timestamp_semantics - maritime_radar_latency_documentation ## Source-documentation TODO Add one",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and s",
+          "18737 ## Expected sensors - 4d_radar - camera - gps - imu ## Timing questions to investigate - radar_camera_gps_imu_synchronization - target_track_timestamp_semantics - maritime_radar_latency_documentation ## Source-documentation TODO Add",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields,"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 2,
+        "hits": [
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "d_radar - camera - gps - imu ## Timing questions to investigate - radar_camera_gps_imu_synchronization - target_track_timestamp_semantics - maritime_radar_latency_documentation ## Source-documentation TODO Add one or more of the following files",
+          "racted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "dar - camera - gps - imu ## Timing questions to investigate - radar_camera_gps_imu_synchronization - target_track_timestamp_semantics - maritime_radar_latency_documentation ## Source-documentation TODO Add one or more of the following files",
+          "ed timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size."
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 1,
+      "max_total": 12,
+      "middleware_semantics_documented": 0,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 1,
+      "total": 3
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T08:27:12.347876+00:00",
+  "source": "candidate_docs/usvtrack",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 1,
+    "max_total": 12,
+    "middleware_semantics_documented": 0,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 1,
+    "total": 3
+  },
+  "topics": [],
+  "warnings": []
+}

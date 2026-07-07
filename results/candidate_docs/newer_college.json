@@ -1,0 +1,86 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "newer_college",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 1,
+        "hits": [
+          "rosbag"
+        ],
+        "snippets": [
+          "ge-dataset/ ## Expected sensors - lidar - camera - imu - ground_truth ## Timing questions to investigate - original_rosbag_time_vs_extracted_file_time - sensor_sync_documentation ## Source-documentation TODO Add one or more of the following"
+        ]
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and s",
+          "camera - imu - ground_truth ## Timing questions to investigate - original_rosbag_time_vs_extracted_file_time - sensor_sync_documentation ## Source-documentation TODO Add one or more of the following files in this folder: - `README.md` copi",
+          "set_page.txt` containing relevant text from the public dataset page. - `paper_notes.txt` with manually extracted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields,"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 2,
+        "hits": [
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "racted timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size.",
+          "ed timing/synchronization statements from the dataset paper. - `metadata_notes.txt` describing available bags/logs, timestamp fields, and sample download size."
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 1,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 1,
+      "total": 3
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T08:27:15.051628+00:00",
+  "source": "candidate_docs/newer_college",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 1,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 1,
+    "total": 3
+  },
+  "topics": [],
+  "warnings": []
+}
