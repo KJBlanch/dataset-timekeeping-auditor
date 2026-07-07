@@ -49,7 +49,7 @@ jobs:
 
       - name: Run synthetic smoke audits
         run: |
-          ./scripts/run_smoke_audits.sh
+          bash ./scripts/run_smoke_audits.sh
 
       - name: Summarize example audit results
         run: |
