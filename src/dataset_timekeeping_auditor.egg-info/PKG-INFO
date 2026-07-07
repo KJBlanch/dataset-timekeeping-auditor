@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: dataset-timekeeping-auditor
+Version: 0.1.0
+Summary: Tools for auditing timestamp semantics in middleware-based robotic perception datasets.
+Requires-Python: >=3.10
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: numpy>=1.24
+Requires-Dist: mcap>=1.1.0
+Requires-Dist: mcap-ros1-support>=0.7.0
+Requires-Dist: mcap-ros2-support>=0.5.0

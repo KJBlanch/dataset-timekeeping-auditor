@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from collections import defaultdict
 from typing import Any, Dict, List, Optional
 
@@ -82,6 +83,11 @@ def audit_mcap(path: str, dataset: str, max_messages: int) -> Dict[str, Any]:
             decoded = None
             if schema and schema.encoding in {"ros1msg", "ros2msg"}:
                 decoded = _try_decode_ros1(reader, schema, message) if schema.encoding == "ros1msg" else _try_decode_ros2(reader, schema, message)
+            elif channel.message_encoding in {"json", "application/json"}:
+                try:
+                    decoded = json.loads(message.data.decode("utf-8"))
+                except Exception:
+                    decoded = None
             header_s = _stamp_from_ros_msg(decoded) if decoded is not None else None
             if header_s is None and decoded is not None:
                 # Some decoder outputs are dict-like.

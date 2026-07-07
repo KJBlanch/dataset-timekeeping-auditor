@@ -1,0 +1,71 @@
+name: Audit examples and smoke datasets
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Weekly smoke test. This deliberately audits only local example/synthetic data.
+    - cron: '15 3 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  audit-examples:
+    name: Run local timing audits
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Run documentation audit
+        run: |
+          mkdir -p results
+          python -m dataset_time_auditor.audit_docs \
+            examples/example_dataset_readme.txt \
+            --dataset example_docs \
+            --output results/example_docs.json
+
+      - name: Run OpenDLV rec-export audit
+        run: |
+          python -m dataset_time_auditor.audit_opendlv_rec_export \
+            examples/example_opendlv_export.csv \
+            --dataset example_opendlv \
+            --output results/example_opendlv.json
+
+      - name: Run synthetic smoke audits
+        run: |
+          ./scripts/run_smoke_audits.sh
+
+      - name: Summarize example audit results
+        run: |
+          python -m dataset_time_auditor.summarize 'results/*.json' \
+            --csv results/timing_summary.csv \
+            --markdown results/timing_summary.md \
+            --latex results/timing_summary.tex
+
+      - name: Upload audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: timing-audit-results
+          path: |
+            results/**/*.json
+            results/**/*.csv
+            results/**/*.md
+            results/**/*.tex
+            smoke/manifest.json
+          if-no-files-found: error

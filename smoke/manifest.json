@@ -1,0 +1,11 @@
+{
+  "description": "Tiny synthetic datasets for dataset-timekeeping-auditor smoke tests.",
+  "files": [
+    "docs/synthetic_mass_good_readme.txt",
+    "docs/synthetic_mass_undocumented_readme.txt",
+    "manifest.json",
+    "mcap/synthetic_mass_log.mcap",
+    "opendlv/opendlv_bad/opendlv.proxy.GeodeticWgs84Reading-0.csv",
+    "opendlv/opendlv_good/opendlv.proxy.GroundSpeedReading-0.csv"
+  ]
+}

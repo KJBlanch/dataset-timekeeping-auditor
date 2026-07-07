@@ -1,0 +1,81 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "smoke_docs_undocumented",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "replay": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "sync_method": {
+        "hit_count": 2,
+        "hits": [
+          "sync",
+          "synchroni"
+        ],
+        "snippets": [
+          "ras, lidar, GNSS, IMU, AIS, and radar. Files are provided for convenience. Timestamps are included in the logs. Synchronization details are not available.",
+          "ras, lidar, GNSS, IMU, AIS, and radar. Files are provided for convenience. Timestamps are included in the logs. Synchronization details are not available."
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 2,
+        "hits": [
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "recorded during a harbour run using cameras, lidar, GNSS, IMU, AIS, and radar. Files are provided for convenience. Timestamps are included in the logs. Synchronization details are not available.",
+          "orded during a harbour run using cameras, lidar, GNSS, IMU, AIS, and radar. Files are provided for convenience. Timestamps are included in the logs. Synchronization details are not available."
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 0,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 0,
+      "replay_semantics_documented": 0,
+      "synchronization_documented": 1,
+      "timestamp_semantics_documented": 1,
+      "total": 2
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T07:30:06.626297+00:00",
+  "source": "smoke/docs/synthetic_mass_undocumented_readme.txt",
+  "summary": {
+    "clock_source_documented": 0,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 0,
+    "replay_semantics_documented": 0,
+    "synchronization_documented": 1,
+    "timestamp_semantics_documented": 1,
+    "total": 2
+  },
+  "topics": [],
+  "warnings": []
+}

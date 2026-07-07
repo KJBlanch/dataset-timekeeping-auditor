@@ -1,0 +1,7 @@
+[console_scripts]
+dta-audit-docs = dataset_time_auditor.audit_docs:main
+dta-audit-mcap = dataset_time_auditor.audit_mcap:main
+dta-audit-opendlv-export = dataset_time_auditor.audit_opendlv_rec_export:main
+dta-audit-ros1 = dataset_time_auditor.audit_ros1_bag:main
+dta-audit-ros2 = dataset_time_auditor.audit_ros2_bag:main
+dta-summarize = dataset_time_auditor.summarize:main

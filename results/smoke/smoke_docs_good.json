@@ -1,0 +1,115 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "smoke_docs_good",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 3,
+        "hits": [
+          "grandmaster",
+          "pps",
+          "ptp"
+        ],
+        "snippets": [
+          "aset. Sensors: stereo camera, marine radar, AIS receiver, lidar, IMU, and GNSS. Clock source: GNSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data",
+          "tereo camera, marine radar, AIS receiver, lidar, IMU, and GNSS. Clock source: GNSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acqu",
+          ". Sensors: stereo camera, marine radar, AIS receiver, lidar, IMU, and GNSS. Clock source: GNSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses se"
+        ]
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 1,
+        "hits": [
+          "rosbag"
+        ],
+        "snippets": [
+          "not be used as sensor time. Known synchronization uncertainty is below 2 ms for cameras and below 1 ms for IMU. rosbag replay should use /clock only for reproducing the original acquisition timeline."
+        ]
+      },
+      "replay": {
+        "hit_count": 2,
+        "hits": [
+          "/clock",
+          "replay"
+        ],
+        "snippets": [
+          "used as sensor time. Known synchronization uncertainty is below 2 ms for cameras and below 1 ms for IMU. rosbag replay should use /clock only for reproducing the original acquisition timeline.",
+          "time. Known synchronization uncertainty is below 2 ms for cameras and below 1 ms for IMU. rosbag replay should use /clock only for reproducing the original acquisition timeline."
+        ]
+      },
+      "sync_method": {
+        "hit_count": 6,
+        "hits": [
+          "hardware trigger",
+          "pps",
+          "ptp",
+          "sync",
+          "synchroni",
+          "trigger"
+        ],
+        "snippets": [
+          "nts acquisition time. Bag record time represents logger receipt time and must not be used as sensor time. Known synchronization uncertainty is below 2 ms for cameras and below 1 ms for IMU. rosbag replay should use /clock only for reprod",
+          "nts acquisition time. Bag record time represents logger receipt time and must not be used as sensor time. Known synchronization uncertainty is below 2 ms for cameras and below 1 ms for IMU. rosbag replay should use /clock only for r",
+          "source: GNSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time r",
+          "NSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time r",
+          "aset. Sensors: stereo camera, marine radar, AIS receiver, lidar, IMU, and GNSS. Clock source: GNSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data",
+          "tereo camera, marine radar, AIS receiver, lidar, IMU, and GNSS. Clock source: GNSS-disciplined PTP grandmaster with PPS distributed to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acqu"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 5,
+        "hits": [
+          "header.stamp",
+          "record time",
+          "sent",
+          "stamp",
+          "timestamp"
+        ],
+        "snippets": [
+          "uted to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used",
+          "acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used as sensor time",
+          "to the acquisition computer. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used",
+          "tion computer. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used as sensor time",
+          "dware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used as sensor time. Known synchronization uncertainty is below 2 ms",
+          "er. The lidar and camera are hardware triggered. IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used as sensor time. Known sy",
+          "IMU data uses sensor acquisition timestamps. ROS header.stamp represents acquisition time. Bag record time represents logger receipt time and must not be used as sensor time. Known synchronization uncertainty is below 2 ms for camer"
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 2,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 1,
+      "replay_semantics_documented": 1,
+      "synchronization_documented": 2,
+      "timestamp_semantics_documented": 2,
+      "total": 8
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T07:30:05.437608+00:00",
+  "source": "smoke/docs/synthetic_mass_good_readme.txt",
+  "summary": {
+    "clock_source_documented": 2,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 1,
+    "replay_semantics_documented": 1,
+    "synchronization_documented": 2,
+    "timestamp_semantics_documented": 2,
+    "total": 8
+  },
+  "topics": [],
+  "warnings": []
+}

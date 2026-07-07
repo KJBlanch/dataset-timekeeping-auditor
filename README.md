@@ -100,3 +100,14 @@ python -m pip install -e .
 ```
 
 See `docs/github_actions.md` for workflow extension patterns, including manual `workflow_dispatch` jobs for small sample downloads.
+
+## Synthetic smoke tests
+
+The repository can generate tiny synthetic datasets for CI and local sanity checks without downloading real robotic datasets:
+
+```bash
+python -m pip install -e .
+./scripts/run_smoke_audits.sh
+```
+
+This creates a well-documented MASS-style README, an intentionally under-documented README, good/bad OpenDLV `.rec` CSV exports, and—when `mcap` is installed—a tiny MCAP log. The script audits them, summarizes the results, and runs assertions that catch basic parser regressions. See `docs/smoke_tests.md`.

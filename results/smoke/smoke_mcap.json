@@ -1,0 +1,86 @@
+{
+  "audit_level": "L2",
+  "audit_type": "mcap",
+  "dataset_id": "smoke_mcap",
+  "documentation": {},
+  "errors": [],
+  "generated_at_utc": "2026-07-07T07:30:10.239252+00:00",
+  "source": "smoke/mcap/synthetic_mass_log.mcap",
+  "summary": {
+    "topic_count": 1,
+    "topics_with_header_stamp": 1,
+    "total_messages_sampled": 20
+  },
+  "topics": [
+    {
+      "decode_errors_sampled": 0,
+      "has_header_stamp_count": 20,
+      "has_log_time": true,
+      "has_publish_time": true,
+      "header_stamp_coverage": 1.0,
+      "header_time_monotonic": {
+        "checked": true,
+        "duplicate_steps": 0,
+        "max_step_s": 0.010000228881835938,
+        "median_step_s": 0.009999990463256836,
+        "min_step_s": 0.009999990463256836,
+        "monotonic_non_decreasing": true,
+        "negative_steps": 0
+      },
+      "log_minus_header_s": {
+        "count": 20,
+        "max": 0.004000186920166016,
+        "mean": 0.0039999961853027345,
+        "median": 0.003999948501586914,
+        "min": 0.0039997100830078125,
+        "p95": 0.004000186920166016,
+        "p99": 0.004000186920166016,
+        "std": 1.4305114746093752e-07
+      },
+      "log_minus_publish_s": {
+        "count": 20,
+        "max": 0.0030002593994140625,
+        "mean": 0.002999985218048096,
+        "median": 0.003000020980834961,
+        "min": 0.0029997825622558594,
+        "p95": 0.0030002593994140625,
+        "p99": 0.0030002593994140625,
+        "std": 1.364412682325792e-07
+      },
+      "log_time_monotonic": {
+        "checked": true,
+        "duplicate_steps": 0,
+        "max_step_s": 0.010000228881835938,
+        "median_step_s": 0.009999990463256836,
+        "min_step_s": 0.009999752044677734,
+        "monotonic_non_decreasing": true,
+        "negative_steps": 0
+      },
+      "message_count_sampled": 20,
+      "publish_minus_header_s": {
+        "count": 20,
+        "max": 0.0010001659393310547,
+        "mean": 0.0010000109672546388,
+        "median": 0.0009999275207519531,
+        "min": 0.0009999275207519531,
+        "p95": 0.0010001659393310547,
+        "p99": 0.0010001659393310547,
+        "std": 1.1371841447555371e-07
+      },
+      "publish_time_monotonic": {
+        "checked": true,
+        "duplicate_steps": 0,
+        "max_step_s": 0.010000228881835938,
+        "median_step_s": 0.009999990463256836,
+        "min_step_s": 0.009999752044677734,
+        "monotonic_non_decreasing": true,
+        "negative_steps": 0
+      },
+      "schema_names": [
+        "synthetic/HeaderedScalar"
+      ],
+      "topic": "/synthetic/imu_scalar"
+    }
+  ],
+  "warnings": []
+}
