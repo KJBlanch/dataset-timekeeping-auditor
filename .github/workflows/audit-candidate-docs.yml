@@ -1,0 +1,46 @@
+name: Audit candidate documentation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "candidate_datasets.yaml"
+      - "candidate_docs/**"
+      - "scripts/audit_candidate_docs.sh"
+      - "src/dataset_time_auditor/**"
+      - ".github/workflows/audit-candidate-docs.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  candidate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Run candidate documentation audits
+        run: |
+          bash ./scripts/audit_candidate_docs.sh
+
+      - name: Upload candidate documentation results
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate-docs-audit-results
+          path: |
+            results/candidate_docs/
+            tables/candidate_docs_summary.csv
+            tables/candidate_docs_summary.md
+            tables/candidate_docs_summary.tex
+          if-no-files-found: warn

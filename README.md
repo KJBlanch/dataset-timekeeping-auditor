@@ -111,3 +111,38 @@ python -m pip install -e .
 ```
 
 This creates a well-documented MASS-style README, an intentionally under-documented README, good/bad OpenDLV `.rec` CSV exports, and—when `mcap` is installed—a tiny MCAP log. The script audits them, summarizes the results, and runs assertions that catch basic parser regressions. See `docs/smoke_tests.md`.
+
+## Curated paper tables via GitHub Actions
+
+For survey-paper evidence, commit audited JSON files under:
+
+```text
+results/curated/
+```
+
+Then run the **Publish curated timing tables** workflow, or simply push the JSON files to `main`/`master`. GitHub Actions will regenerate and commit:
+
+```text
+tables/timing_summary.csv
+tables/timing_summary.md
+tables/timing_summary.tex
+```
+
+The local equivalent is:
+
+```bash
+./scripts/summarize_curated_results.sh
+```
+
+This keeps heavy source datasets out of Git while version-controlling the small audit outputs and paper-ready summary tables.
+
+
+## Candidate dataset polling
+
+The MASS-oriented candidate registry lives in `candidate_datasets.yaml`. Start with a documentation-only L0 pass by placing README excerpts, dataset-page text, or timing notes under `candidate_docs/<dataset_id>/`, then run:
+
+```bash
+bash ./scripts/audit_candidate_docs.sh
+```
+
+GitHub Actions also includes `Audit candidate documentation`, which uploads candidate documentation summaries as artifacts.

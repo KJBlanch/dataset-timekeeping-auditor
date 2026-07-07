@@ -59,3 +59,43 @@ python -m dataset_time_auditor.audit_opendlv_rec_export \
   --dataset my_opendlv_dataset \
   --output results/my_opendlv_dataset.json
 ```
+
+## Persisting curated results into the repository
+
+Smoke-test outputs are intentionally uploaded as disposable workflow artifacts. For paper tables, use the curated-results path instead:
+
+```text
+results/curated/*.json   # committed audit evidence
+ tables/*.csv|*.md|*.tex # generated paper tables
+```
+
+The workflow `.github/workflows/publish-curated-results.yml` summarizes committed curated JSON audit files and commits the generated tables back to the repository. It runs automatically when JSON files under `results/curated/` are pushed, and it can also be started manually from **Actions → Publish curated timing tables → Run workflow**.
+
+Recommended workflow:
+
+1. Run a real dataset audit locally or on a self-hosted runner.
+2. Inspect the resulting JSON file.
+3. Commit only the JSON result under `results/curated/`.
+4. Push to GitHub.
+5. The workflow regenerates and commits:
+
+```text
+tables/timing_summary.csv
+tables/timing_summary.md
+tables/timing_summary.tex
+```
+
+Local equivalent:
+
+```bash
+python -m pip install -e .
+./scripts/summarize_curated_results.sh
+```
+
+You can also summarize a different glob:
+
+```bash
+./scripts/summarize_curated_results.sh 'results/curated/**/*.json'
+```
+
+The workflow is deliberately scoped to summary products. It does not commit raw bag files, MCAP files, `.rec` files, or generated smoke-test outputs.

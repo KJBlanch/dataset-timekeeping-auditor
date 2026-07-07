@@ -1,0 +1,419 @@
+# Candidate registry for the dataset timekeeping survey.
+# Goal: keep raw downloads small. Use L0 documentation audits first, then L1 on one small sample.
+# audit_level_target:
+#   L0 = documentation/README/paper only
+#   L1 = metadata or one sample sequence
+#   L2 = full representative sequence
+
+candidates:
+  - id: ar_table
+    name: AR Table Dataset
+    tier: 1
+    domain: indoor_visual_inertial_rgbd
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_small_bag
+    sensors_expected: [rgbd_camera, imu]
+    candidate_urls:
+      - https://github.com/rpng/ar_table_dataset
+    timing_questions:
+      - real_sense_header_stamp_vs_bag_record_time
+      - imu_camera_timestamp_alignment
+      - whether_clock_source_is_documented
+    status: candidate
+
+  - id: tum_vi
+    name: TUM Visual-Inertial Dataset
+    tier: 1
+    domain: visual_inertial
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_512px_room_sequence
+    sensors_expected: [stereo_camera, imu, motion_capture_ground_truth]
+    candidate_urls:
+      - https://cvg.cit.tum.de/data/datasets/visual-inertial-dataset
+    timing_questions:
+      - camera_imu_timestamp_consistency
+      - motion_capture_time_basis
+      - bag_record_time_vs_header_stamp
+    status: candidate
+
+  - id: uzh_event_camera
+    name: UZH Event Camera Dataset
+    tier: 1
+    domain: event_camera_visual_inertial
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_short_sequence
+    sensors_expected: [event_camera, frame_camera, imu, ground_truth]
+    candidate_urls:
+      - https://www.ifi.uzh.ch/en/rpg/software_datasets/davis_datasets.html
+    timing_questions:
+      - event_sample_time_vs_ros_message_time
+      - frame_camera_time_vs_event_time
+      - imu_alignment
+    status: candidate
+
+  - id: uzh_fpv
+    name: UZH FPV Dataset
+    tier: 1
+    domain: aggressive_visual_inertial_event_camera
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_short_sequence
+    sensors_expected: [event_camera, frame_camera, imu, ground_truth]
+    candidate_urls:
+      - https://fpv.ifi.uzh.ch/datasets/
+    timing_questions:
+      - high_rate_imu_and_event_timestamp_semantics
+      - ground_truth_alignment
+    status: candidate
+
+  - id: viode
+    name: VIODE
+    tier: 1
+    domain: simulated_visual_inertial
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_sequence
+    sensors_expected: [stereo_camera, imu, odometry]
+    candidate_urls:
+      - https://github.com/kminoda/VIODE
+    timing_questions:
+      - simulated_time_vs_bag_record_time
+      - ros_clock_or_use_sim_time_semantics
+    status: candidate
+
+  - id: kaist_vio
+    name: KAIST VIO Dataset
+    tier: 1
+    domain: vehicle_visual_inertial
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_bag
+    sensors_expected: [stereo_camera, imu]
+    candidate_urls:
+      - https://github.com/url-kaist/kaistviodataset
+    timing_questions:
+      - vehicle_camera_imu_sync
+      - bag_record_time_vs_header_stamp
+    status: candidate
+
+  - id: cartographer_deutsches_museum
+    name: Cartographer Deutsches Museum
+    tier: 1
+    domain: lidar_imu_mapping
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_bag
+    sensors_expected: [lidar, imu]
+    candidate_urls:
+      - https://google-cartographer-ros.readthedocs.io/en/latest/data.html
+    timing_questions:
+      - lidar_scan_time_semantics
+      - imu_time_alignment
+      - tf_timestamp_semantics
+    status: candidate
+
+  - id: autoware_jkk_ouster_mcap
+    name: Autoware / JKK Ouster MCAP Sample
+    tier: 1
+    domain: autonomous_vehicle_lidar
+    mass_relevance: medium
+    format_expected: ros2_mcap_or_ros2_bag_plus_pcap
+    audit_level_target: L1
+    download_policy: one_mcap_or_pcap_sample
+    sensors_expected: [lidar]
+    candidate_urls:
+      - https://jkk-research.github.io/dataset/jkk_dataset_02/
+      - https://autowarefoundation.github.io/autoware-documentation/main/datasets/
+    timing_questions:
+      - mcap_log_time_vs_publish_time_vs_header_stamp
+      - pcap_packet_time_vs_decoded_lidar_time
+    status: candidate
+
+  - id: koide_lidar_imu_mapping
+    name: Koide LiDAR-IMU Mapping Test Dataset
+    tier: 1
+    domain: lidar_inertial_mapping
+    mass_relevance: medium
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_bag
+    sensors_expected: [lidar, imu]
+    candidate_urls:
+      - https://zenodo.org/records/6836915
+    timing_questions:
+      - lidar_scan_time_vs_imu_sample_time
+      - header_stamp_vs_record_time
+    status: candidate
+
+  - id: robocup_rosbag_2023_2024
+    name: RoboCup 2023-2024 ROSbag Dataset
+    tier: 1
+    domain: service_robotics_hri_navigation
+    mass_relevance: low
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_bag_if_available
+    sensors_expected: [mobile_robot_sensors, task_data]
+    candidate_urls:
+      - https://pmc.ncbi.nlm.nih.gov/articles/PMC11615538/
+    timing_questions:
+      - task_event_time_vs_sensor_time
+      - rosbag_record_time_vs_message_header_time
+    status: candidate
+
+  - id: mit_marine_perception_robowhaler
+    name: MIT Sea Grant Marine Perception / RoboWhaler
+    tier: 1
+    domain: maritime_asv_perception
+    mass_relevance: high
+    format_expected: ros1_bag_or_extracted_timestamped_files
+    audit_level_target: L1
+    download_policy: one_smallest_rosbag_or_timestamp_csv
+    sensors_expected: [rtk_ins, lidar, marine_radar, visible_camera, thermal_camera]
+    candidate_urls:
+      - https://repository.library.noaa.gov/view/noaa/41894/noaa_41894_DS1.pdf
+    timing_questions:
+      - radar_camera_lidar_ins_time_basis
+      - rosbag_timestamp_extraction_semantics
+      - gnss_or_ins_clock_discipline
+      - maritime_sensor_latency_documentation
+    status: candidate
+
+  - id: autoferry_sensor_fusion
+    name: Autoferry Sensor Fusion Dataset
+    tier: 1
+    domain: maritime_multitarget_tracking
+    mass_relevance: high
+    format_expected: unknown
+    audit_level_target: L0
+    download_policy: inspect_repository_then_sample
+    sensors_expected: [maritime_tracking_sensors]
+    candidate_urls:
+      - https://github.com/Autoferry/sensor_fusion_dataset
+    timing_questions:
+      - target_track_time_basis
+      - sensor_fusion_latency_and_alignment
+      - middleware_or_file_timestamp_semantics
+    status: candidate
+
+  - id: seepersea
+    name: SeePerSea
+    tier: 1
+    domain: maritime_multimodal_obstacle_perception
+    mass_relevance: high
+    format_expected: unknown
+    audit_level_target: L0
+    download_policy: docs_first
+    sensors_expected: [maritime_cameras, possible_multimodal_sensors]
+    candidate_urls:
+      - https://arxiv.org/abs/2404.18411
+    timing_questions:
+      - maritime_obstacle_annotation_time_basis
+      - frame_timestamp_availability
+      - multi_sensor_sync_if_applicable
+    status: candidate
+
+  - id: usvtrack
+    name: USVTrack
+    tier: 1
+    domain: maritime_4d_radar_camera_tracking
+    mass_relevance: high
+    format_expected: unknown
+    audit_level_target: L0
+    download_policy: docs_first
+    sensors_expected: [4d_radar, camera, gps, imu]
+    candidate_urls:
+      - https://arxiv.org/abs/2506.18737
+    timing_questions:
+      - radar_camera_gps_imu_synchronization
+      - target_track_timestamp_semantics
+      - maritime_radar_latency_documentation
+    status: candidate
+
+  - id: hilti_slam_2021
+    name: Hilti SLAM Challenge 2021
+    tier: 2
+    domain: industrial_multisensor_slam
+    mass_relevance: medium
+    format_expected: ros1_bag
+    audit_level_target: L1
+    download_policy: one_short_sequence
+    sensors_expected: [camera, imu, lidar, ground_truth, tf]
+    candidate_urls:
+      - https://hilti-challenge.com/dataset-2021
+    timing_questions:
+      - multi_sensor_sync_documentation
+      - tf_timestamp_semantics
+      - livox_custom_message_timing
+    status: candidate
+
+  - id: newer_college
+    name: Newer College Dataset
+    tier: 2
+    domain: lidar_visual_inertial_mapping
+    mass_relevance: medium
+    format_expected: ros1_bag_and_extracted_files
+    audit_level_target: L1
+    download_policy: shortest_sequence
+    sensors_expected: [lidar, camera, imu, ground_truth]
+    candidate_urls:
+      - https://ori-drs.github.io/newer-college-dataset/
+    timing_questions:
+      - original_rosbag_time_vs_extracted_file_time
+      - sensor_sync_documentation
+    status: candidate
+
+  - id: mulran
+    name: MulRan
+    tier: 2
+    domain: radar_lidar_gnss_imu_mapping
+    mass_relevance: medium
+    format_expected: raw_files_plus_ros_player
+    audit_level_target: L0
+    download_policy: docs_and_player_semantics_first
+    sensors_expected: [radar, lidar, gnss, imu]
+    candidate_urls:
+      - https://sites.google.com/view/mulran-pr/download
+    timing_questions:
+      - ros_player_timestamp_semantics
+      - radar_scan_time_vs_lidar_gnss_time
+      - conversion_loss_of_timing_metadata
+    status: candidate
+
+  - id: utbm_robocar
+    name: UTBM Robocar / EU Long-term Dataset
+    tier: 2
+    domain: autonomous_vehicle_multisensor
+    mass_relevance: medium
+    format_expected: ros1_bag
+    audit_level_target: L0
+    download_policy: docs_first
+    sensors_expected: [lidar, radar, cameras, gnss, imu]
+    candidate_urls:
+      - https://epan-utbm.github.io/utbm_robocar_dataset/
+    timing_questions:
+      - long_duration_clock_drift_documentation
+      - multi_sensor_sync_and_rosbag_time
+    status: candidate
+
+  - id: vinu
+    name: ViNU Vision-Navigation Dataset
+    tier: 2
+    domain: unstructured_navigation
+    mass_relevance: medium
+    format_expected: ros1_bag_postprocessed
+    audit_level_target: L1
+    download_policy: one_sample_if_available
+    sensors_expected: [camera, lidar, imu, gnss]
+    candidate_urls:
+      - https://data.mendeley.com/datasets/gnsb8mwc73/1
+    timing_questions:
+      - post_processed_synchronized_bag_semantics
+      - original_vs_converted_timestamp_preservation
+    status: candidate
+
+  - id: i2nav_robot
+    name: i2Nav-Robot
+    tier: 2
+    domain: multisensor_navigation_mapping
+    mass_relevance: medium
+    format_expected: unknown
+    audit_level_target: L0
+    download_policy: docs_first
+    sensors_expected: [gnss, imu, lidar, radar, camera]
+    candidate_urls:
+      - https://github.com/i2Nav-WHU/i2Nav-Robot
+    timing_questions:
+      - claimed_time_synchronization_method
+      - navigation_ground_truth_time_basis
+    status: candidate
+
+  - id: navinst
+    name: NavINST Dataset
+    tier: 2
+    domain: high_precision_navigation
+    mass_relevance: medium
+    format_expected: ros_integrated_or_ros_adjacent
+    audit_level_target: L0
+    download_policy: docs_first
+    sensors_expected: [gnss, imu, camera, lidar]
+    candidate_urls:
+      - https://arxiv.org/html/2502.13863v1
+    timing_questions:
+      - high_precision_navigation_time_basis
+      - ros_integration_timestamp_semantics
+    status: candidate
+
+  - id: rellis_3d
+    name: RELLIS-3D
+    tier: 3
+    domain: offroad_robotics
+    mass_relevance: low
+    format_expected: rosbag_available
+    audit_level_target: L0
+    download_policy: metadata_first
+    sensors_expected: [lidar, camera, imu, gnss]
+    candidate_urls:
+      - https://github.com/unmannedlab/RELLIS-3D
+    timing_questions:
+      - rosbag_availability_and_timestamp_semantics
+      - lidar_camera_sync
+    status: candidate
+
+  - id: m2dgr
+    name: M2DGR
+    tier: 3
+    domain: ground_robot_multisensor
+    mass_relevance: medium
+    format_expected: likely_ros_or_raw_plus_ros
+    audit_level_target: L0
+    download_policy: docs_first
+    sensors_expected: [camera, event_camera, lidar, gnss, imu, ground_truth]
+    candidate_urls:
+      - https://arxiv.org/abs/2112.13659
+    timing_questions:
+      - multi_sensor_sync_documentation
+      - event_camera_and_lidar_time_semantics
+    status: candidate
+
+  - id: icsens_visual_inertial_lidar
+    name: i.c.sens Visual-Inertial-LiDAR Dataset
+    tier: 3
+    domain: mobile_mapping
+    mass_relevance: medium
+    format_expected: ros1_bag
+    audit_level_target: L0
+    download_policy: docs_first_due_to_10gb_bags
+    sensors_expected: [camera, lidar, imu, gnss_ins]
+    candidate_urls:
+      - https://data.uni-hannover.de/dataset/i-c-sens-visual-inertial-lidar-dataset
+    timing_questions:
+      - gnss_ins_ground_truth_time_basis
+      - rosbag_record_time_vs_header_stamp
+    status: candidate
+
+  - id: rosario_v2
+    name: Rosario Dataset v2
+    tier: 3
+    domain: agricultural_robotics_multisensor
+    mass_relevance: low
+    format_expected: unknown_or_ros
+    audit_level_target: L1
+    download_policy: one_sequence
+    sensors_expected: [field_robotics_sensors]
+    candidate_urls:
+      - https://arxiv.org/abs/2508.21635
+    timing_questions:
+      - hardware_synchronization_claims
+      - field_robot_timestamp_semantics
+    status: candidate
