@@ -1,0 +1,74 @@
+# Starter sampling frame. Fill in exact sample URLs/DOIs as you audit.
+# download_policy: docs_only | smallest_sequence | one_sequence | avoid_full_download
+
+- id: euroc_mav
+  name: EuRoC MAV
+  primary_format: ros1_bag
+  recommended_audit_level: L2
+  download_policy: one_sequence
+  sensors: [stereo_camera, imu, ground_truth]
+  timing_questions:
+    - record_time_vs_header_stamp
+    - camera_imu_sync_claims
+    - ground_truth_time_basis
+
+- id: tum_vi
+  name: TUM Visual-Inertial Dataset
+  primary_format: ros1_bag
+  recommended_audit_level: L2
+  download_policy: smallest_sequence
+  sensors: [stereo_camera, imu, motion_capture]
+  timing_questions:
+    - consistent_timestamps
+    - imu_camera_sync
+
+- id: uzh_event_camera
+  name: UZH Event-Camera Dataset
+  primary_format: ros1_bag
+  recommended_audit_level: L2
+  download_policy: smallest_sequence
+  sensors: [event_camera, frame_camera, imu, ground_truth]
+  timing_questions:
+    - event_timestamp_semantics
+    - frame_vs_event_vs_imu_time
+
+- id: viode
+  name: VIODE
+  primary_format: ros1_bag
+  recommended_audit_level: L2
+  download_policy: smallest_sequence
+  sensors: [stereo_camera, imu, odometry]
+  timing_questions:
+    - simulated_time_vs_record_time
+    - ros_clock_semantics
+
+- id: autoware_ouster_sample
+  name: Autoware Ouster sample
+  primary_format: ros2_bag_and_pcap
+  recommended_audit_level: L1
+  download_policy: smallest_sequence
+  sensors: [lidar]
+  timing_questions:
+    - ros2_storage_time_vs_sensor_time
+    - pcap_packet_time_vs_decoded_message_time
+
+- id: hilti_slam_2021
+  name: Hilti SLAM Challenge 2021
+  primary_format: ros1_bag
+  recommended_audit_level: L1
+  download_policy: one_sequence
+  sensors: [camera, imu, lidar, ground_truth]
+  timing_questions:
+    - multi_sensor_sync_documentation
+    - tf_timestamp_semantics
+
+- id: opendlv_reeds_or_local
+  name: OpenDLV / REEDS-style local recording
+  primary_format: opendlv_rec
+  recommended_audit_level: L1
+  download_policy: local_export_only
+  sensors: [camera, radar, lidar, imu, gnss]
+  timing_questions:
+    - sent_received_sample_time_point
+    - envelope_time_semantics
+    - rec_replay_semantics

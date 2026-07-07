@@ -1,0 +1,4 @@
+sent.seconds,sent.microseconds,received.seconds,received.microseconds,sampleTimePoint.seconds,sampleTimePoint.microseconds,field_x
+1000,100000,1000,101500,1000,99500,1.0
+1000,200000,1000,201600,1000,199400,2.0
+1000,300000,1000,301400,1000,299600,3.0

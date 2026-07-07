@@ -1,0 +1,1 @@
+This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag record time is the middleware receive time and should not be used as the sensor acquisition time. Playback can use rosbag play --clock.

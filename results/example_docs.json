@@ -1,0 +1,105 @@
+{
+  "audit_level": "L0",
+  "audit_type": "docs",
+  "dataset_id": "example_docs",
+  "documentation": {
+    "categories": {
+      "camera_timing": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "clock_source": {
+        "hit_count": 1,
+        "hits": [
+          "ptp"
+        ],
+        "snippets": [
+          "xamples/example_dataset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag"
+        ]
+      },
+      "latency_jitter": {
+        "hit_count": 0,
+        "hits": [],
+        "snippets": []
+      },
+      "middleware": {
+        "hit_count": 2,
+        "hits": [
+          "ros bag",
+          "rosbag"
+        ],
+        "snippets": [
+          "bag record time is the middleware receive time and should not be used as the sensor acquisition time. Playback can use rosbag play --clock.",
+          "--- FILE: examples/example_dataset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated"
+        ]
+      },
+      "replay": {
+        "hit_count": 2,
+        "hits": [
+          "playback",
+          "rosbag play"
+        ],
+        "snippets": [
+          "sition clock. The bag record time is the middleware receive time and should not be used as the sensor acquisition time. Playback can use rosbag play --clock.",
+          "bag record time is the middleware receive time and should not be used as the sensor acquisition time. Playback can use rosbag play --clock."
+        ]
+      },
+      "sync_method": {
+        "hit_count": 5,
+        "hits": [
+          "hardware trigger",
+          "ptp",
+          "sync",
+          "synchroni",
+          "trigger"
+        ],
+        "snippets": [
+          "--- FILE: examples/example_dataset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition cl",
+          "--- FILE: examples/example_dataset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisiti",
+          "ample_dataset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag record time is the midd",
+          "aset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag record time is the midd",
+          "xamples/example_dataset_readme.txt --- This example dataset was recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag"
+        ]
+      },
+      "timestamp_fields": {
+        "hit_count": 3,
+        "hits": [
+          "header.stamp",
+          "record time",
+          "stamp"
+        ],
+        "snippets": [
+          "recorded using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag record time is the middleware receive time and should not be used as the",
+          "d using ROS bag. Sensors were synchronized using PTP and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag record time is the middleware receive time and should not be used as the",
+          "and a hardware trigger for cameras. Each message includes a header.stamp generated from the acquisition clock. The bag record time is the middleware receive time and should not be used as the sensor acquisition time. Playback can use rosbag play --cl"
+        ]
+      }
+    },
+    "score": {
+      "clock_source_documented": 1,
+      "latency_or_offset_documented": 0,
+      "max_total": 12,
+      "middleware_semantics_documented": 1,
+      "replay_semantics_documented": 1,
+      "synchronization_documented": 2,
+      "timestamp_semantics_documented": 2,
+      "total": 7
+    }
+  },
+  "errors": [],
+  "generated_at_utc": "2026-07-07T07:04:41.245553+00:00",
+  "source": "examples/example_dataset_readme.txt",
+  "summary": {
+    "clock_source_documented": 1,
+    "latency_or_offset_documented": 0,
+    "max_total": 12,
+    "middleware_semantics_documented": 1,
+    "replay_semantics_documented": 1,
+    "synchronization_documented": 2,
+    "timestamp_semantics_documented": 2,
+    "total": 7
+  },
+  "topics": [],
+  "warnings": []
+}

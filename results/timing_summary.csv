@@ -1,0 +1,3 @@
+dataset_id,audit_type,audit_level,source,topic_count,total_messages_sampled,topics_with_header_stamp,topics_with_sent_time,topics_with_received_time,topics_with_sample_time_point,docs_score,docs_score_max,warning_count,error_count,json_path,mean_available_offset_s
+example_docs,docs,L0,examples/example_dataset_readme.txt,0,,,,,,7.0,12.0,0,0,results/example_docs.json,
+example_opendlv,opendlv_rec_export,L1,examples/example_opendlv_export.csv,1,,,1.0,1.0,1.0,,,0,0,results/example_opendlv.json,0.001749999999958618

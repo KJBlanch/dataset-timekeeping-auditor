@@ -1,0 +1,92 @@
+{
+  "audit_level": "L1",
+  "audit_type": "opendlv_rec_export",
+  "dataset_id": "example_opendlv",
+  "documentation": {},
+  "errors": [],
+  "generated_at_utc": "2026-07-07T07:04:42.521146+00:00",
+  "source": "examples/example_opendlv_export.csv",
+  "summary": {
+    "csv_file_count": 1,
+    "files_with_received_time": 1,
+    "files_with_sample_time_point": 1,
+    "files_with_sent_time": 1,
+    "note": "OpenDLV .rec binary decoding is delegated to cluon-rec2fuse or equivalent tooling. This audit inspects the exported CSV structure."
+  },
+  "topics": [
+    {
+      "columns": [
+        "sent.seconds",
+        "sent.microseconds",
+        "received.seconds",
+        "received.microseconds",
+        "sampleTimePoint.seconds",
+        "sampleTimePoint.microseconds",
+        "field_x"
+      ],
+      "file": "examples/example_opendlv_export.csv",
+      "has_received_time": true,
+      "has_sample_time_point": true,
+      "has_sent_time": true,
+      "received_minus_sample_s": {
+        "count": 3,
+        "max": 0.002200000000016189,
+        "mean": 0.0019999999999527063,
+        "median": 0.0019999999999527063,
+        "min": 0.0017999999998892235,
+        "p95": 0.0021800000000098407,
+        "p99": 0.0021960000000149195,
+        "std": 0.00016329931623737862
+      },
+      "received_minus_sent_s": {
+        "count": 3,
+        "max": 0.0015999999999394277,
+        "mean": 0.0014999999999645297,
+        "median": 0.0014999999999645297,
+        "min": 0.0013999999999896318,
+        "p95": 0.0015899999999419378,
+        "p99": 0.0015979999999399296,
+        "std": 8.164965807227686e-05
+      },
+      "received_time_monotonic": {
+        "checked": true,
+        "duplicate_steps": 0,
+        "max_step_s": 0.10009999999999764,
+        "median_step_s": 0.09994999999997844,
+        "min_step_s": 0.09979999999995925,
+        "monotonic_non_decreasing": true,
+        "negative_steps": 0
+      },
+      "rows_sampled": 3,
+      "sample_time_monotonic": {
+        "checked": true,
+        "duplicate_steps": 0,
+        "max_step_s": 0.10020000000008622,
+        "median_step_s": 0.10005000000001019,
+        "min_step_s": 0.09989999999993415,
+        "monotonic_non_decreasing": true,
+        "negative_steps": 0
+      },
+      "sent_minus_sample_s": {
+        "count": 3,
+        "max": 0.0006000000000767614,
+        "mean": 0.0004999999999881766,
+        "median": 0.0004999999999881766,
+        "min": 0.0003999999998995918,
+        "p95": 0.0005900000000679029,
+        "p99": 0.0005980000000749896,
+        "std": 8.164965816510178e-05
+      },
+      "sent_time_monotonic": {
+        "checked": true,
+        "duplicate_steps": 0,
+        "max_step_s": 0.10000000000002274,
+        "median_step_s": 0.0999999999999659,
+        "min_step_s": 0.09999999999990905,
+        "monotonic_non_decreasing": true,
+        "negative_steps": 0
+      }
+    }
+  ],
+  "warnings": []
+}

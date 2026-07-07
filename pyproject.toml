@@ -1,0 +1,28 @@
+[project]
+name = "dataset-timekeeping-auditor"
+version = "0.1.0"
+description = "Tools for auditing timestamp semantics in middleware-based robotic perception datasets."
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+  "pandas>=2.0",
+  "numpy>=1.24",
+  "mcap>=1.1.0",
+  "mcap-ros1-support>=0.7.0",
+  "mcap-ros2-support>=0.5.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+dta-audit-docs = "dataset_time_auditor.audit_docs:main"
+dta-audit-mcap = "dataset_time_auditor.audit_mcap:main"
+dta-audit-ros1 = "dataset_time_auditor.audit_ros1_bag:main"
+dta-audit-ros2 = "dataset_time_auditor.audit_ros2_bag:main"
+dta-audit-opendlv-export = "dataset_time_auditor.audit_opendlv_rec_export:main"
+dta-summarize = "dataset_time_auditor.summarize:main"
